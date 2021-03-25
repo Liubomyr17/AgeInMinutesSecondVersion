@@ -48,7 +48,9 @@ class MainActivity : AppCompatActivity() {
 
             val differenceInMinutes = currentDateToMinutes - selectedDateInMinutes
 
-            tvSelectedDateInMinutes.text = differenceInMinutes.toString()
+            val differenceInDays = differenceInMinutes / (60 * 24)
+
+            tvSelectedDateInMinutes.text = differenceInDays.toString()
 
         }, year, month, day)
 
